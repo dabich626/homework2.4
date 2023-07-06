@@ -23,7 +23,7 @@ public class CalculateService {
         }
 
 
-        public String plusOne(int num1, int num2) {
+        public String plusOne(int num1, int  num2) {
             num1 = 5;
             num2 = 5;
             int result = num1 + num2;

@@ -10,7 +10,7 @@ public class CalculateController {
 
     public CalculateController(CalculateService calculateService) {
 
-        this.calculateService = calculateService;
+        this.calculateService =  calculateService;
     }
 
     @GetMapping(path = "/calculator")
