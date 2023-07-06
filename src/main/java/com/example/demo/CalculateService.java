@@ -7,9 +7,6 @@ import org.springframework.stereotype.Service;
 public class CalculateService {
 
 
-
-
-
     public class CalculateController {
 
         public CalculateController() {
@@ -26,8 +23,8 @@ public class CalculateService {
         }
 
 
-        public String plusOne(int num1,int num2) {
-           num1 = 5;
+        public String plusOne(int num1, int num2) {
+            num1 = 5;
             num2 = 5;
             int result = num1 + num2;
             System.out.println(num1 + " + " + num2 + " = " + result);
@@ -35,9 +32,7 @@ public class CalculateService {
         }
 
 
-
-
-        public String minus(int num1,int num2) {
+        public String minus(int num1, int num2) {
             num1 = 5;
             num2 = 5;
             int result = num1 - num2;
@@ -47,7 +42,7 @@ public class CalculateService {
         }
 
 
-        public String multiply(int num1,int num2) {
+        public String multiply(int num1, int num2) {
             num1 = 5;
             num2 = 5;
             int result = num1 * num2;
@@ -57,9 +52,9 @@ public class CalculateService {
         }
 
 
-        public String divide(int num1,int num2) {
+        public String divide(int num1, int num2) {
             num1 = 5;
-           num2 = 5;
+            num2 = 5;
             int result = num1 / num2;
             System.out.println(num1 + " / " + num2 + " = " + result);
             return "5 / 5 = 1";
