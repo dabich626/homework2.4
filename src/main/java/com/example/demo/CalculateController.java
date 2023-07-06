@@ -6,12 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class CalculateController {
-    private final CalculateService calculateService;
+    private final CalculateService calculateService = new calculateService;
 
-    public CalculateController(CalculateService calculateService) {
 
-        this.calculateService = calculateService;
-    }
 
     @GetMapping(path = "/calculator")
     public String welcome() {
@@ -19,26 +16,26 @@ public class CalculateController {
     }
 
     @GetMapping(path = "/calculator/plus")
-    public String plusOne(@RequestParam("num1, num2") int num1, int num2) {
+    public String plusOne(@RequestParam(@RequestParam("num1") int num1, @RequestParam("num2") int num2) int num1, int num2) {
 
         return calculateService.plusOne(num1, num2);
     }
 
     @GetMapping(path = " /calculator/minus")
-    public String minus(@RequestParam("num1, num2") int num1, int num2) {
+    public String minus(@RequestParam("num1") int num1, @RequestParam("num2") int num2) int num1, int num2) {
 
         return calculateService.minus(num1, num2);
     }
 
     @GetMapping(path = "/calculator/multiply")
-    public String multiply(@RequestParam("num1, num2") int num1, int num2) {
+    public String multiply(@RequestParam("num1") int num1, @RequestParam("num2") int num2) int num1, int num2) {
 
         return calculateService.multiply(num1, num2);
     }
 
     @GetMapping(path = "/calculator/divide")
 
-    public String divide(@RequestParam("num1, num2") int num1, int num2) {
+    public String divide(@RequestParam(@RequestParam("num1") int num1, @RequestParam("num2") int num2) int num1, int num2) {
 
         return calculateService.divide(num1, num2);
 
