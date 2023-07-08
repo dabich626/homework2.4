@@ -52,7 +52,7 @@ public class CalculateService {
         }
 
 
-        public int divide(int num1, int num2)  {
+        public int divide(int num1, int num2) {
             num1 = 5;
             num2 = 5;
             int result = num1 / num2;
