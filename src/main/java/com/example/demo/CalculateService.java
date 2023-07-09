@@ -27,7 +27,7 @@ public class CalculateService {
             num1 = 5;
             num2 = 5;
             int result = num1 + num2;
-            System.out.println(num1 + " + " + num2 + " = " + result);
+            System.out.println(num1 + " + " + num2 + "  = " + result);
             return num1 + num2;
         }
 
