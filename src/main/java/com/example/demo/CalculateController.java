@@ -6,40 +6,48 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class CalculateController {
-    private final CalculateService calculateService;
+    private final CalculateService calculateService = new calculateService;
 
-    public CalculateController(CalculateService calculateService) {
-
-        this.calculateService = calculateService;
-    }
 
     @GetMapping(path = "/calculator")
     public String welcome() {
         return calculateService.welcome;
     }
 
-    @GetMapping(path = "/calculator/plus?num1=5&num2=5 ")
-    public String plusOne() {
+    @GetMapping(path = "/calculator/plus")
+    public String plus(@RequestParam(@RequestParam("num1")int num1, @RequestParam("num2")int num2) int num1, int num2) {
 
-        return calculateService.plusOne;
+
+        return num1 + " + " + num2 + " = " + service.plus(num1, num2);
     }
 
-    @GetMapping(path = " /calculator/minus?num1=5&num2=5")
-    public String minus() {
+    @GetMapping(path = " /calculator/minus")
+    public String minus(@RequestParam("num1") int num1, @RequestParam("num2") int num2)
 
-        return calculateService.minus;
+    int num1, int num2)
+
+    {
+
+        return num1 + " - " + num2 + " = " + service.minus(num1, num2);
     }
 
-    @GetMapping(path = "/calculator/multiply?num1=5&num2=5")
-    public String multiply() {
+    @GetMapping(path = "/calculator/multiply")
+    public String multiply(@RequestParam("num1") int num1, @RequestParam("num2") int num2)
 
-        return calculateService.multiply;
+    int num1, int num2)
+
+    {
+
+        return num1 + " * " + num2 + " = " + service.multiply(num1, num2);
     }
 
-    @GetMapping(path = "/calculator/divide?num1=5&num2=5")
-    public String divide() {
+    @GetMapping(path = "/calculator/divide")
 
-        return calculateService.divide;
+    public String divide(@RequestParam(@RequestParam("num1")int num1, @RequestParam("num2")int num2) int num1, int num2) {
+        if (num2 == 0) {
+            return "На 0 делить нельзя";
+        }
+        return num1 + " / " + num2 + " = " + service.divide(num1, num2);
 
     }
 
